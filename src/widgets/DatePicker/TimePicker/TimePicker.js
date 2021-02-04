@@ -5,19 +5,22 @@ import './TimePicker.css';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import Input from '../../../components/Input/Input';
 import { TimeContext } from '../../../contexts/TimeContext';
-// import * as constant from '../../../shared/getDate';
 
 function TimePicker({ timeToControl, dateSetter }) {
   const {
-    amMeridian, pmMeridian, computedTime,
+    amMeridian, pmMeridian,
+    computedTime,
+    handleIncrementDate,
+    handleIncrementHour, handleDecrementHour, handleDecrementDate,
+    handleSetToPm, handleSetToAm,
   } = useContext(TimeContext);
   // const { hour, minute } = constant.getTime(startDate);
   return (
-    <div>
+    <div className="TimePicker__Wrapper">
       <div className="TimePicker">
         <div className="setter">
           <div className=" setter__item">
-            <FaChevronUp />
+            <FaChevronUp className="control_icon" onClick={() => handleIncrementHour(timeToControl, 1, dateSetter)} />
             <DatePicker
               selected={timeToControl}
               onChange={(date) => dateSetter(date)}
@@ -28,11 +31,11 @@ function TimePicker({ timeToControl, dateSetter }) {
               dateFormat="h"
               calendarClassName="TimeOnly"
             />
-            <FaChevronDown />
+            <FaChevronDown className="control_icon" onClick={() => handleDecrementHour(timeToControl, 1, dateSetter)} />
           </div>
           <span>:</span>
           <div className="setter__item">
-            <FaChevronUp />
+            <FaChevronUp className="control_icon" onClick={() => handleIncrementDate(timeToControl, 1, dateSetter)} />
             <DatePicker
               selected={timeToControl}
               onChange={(date) => dateSetter(date)}
@@ -43,15 +46,16 @@ function TimePicker({ timeToControl, dateSetter }) {
               dateFormat="mm"
               calendarClassName="TimeOnly"
             />
-            <FaChevronDown />
+            <FaChevronDown className="control_icon" onClick={() => handleDecrementDate(timeToControl, 1, dateSetter)} />
           </div>
         </div>
 
         <div className="meridians">
-          <button type="button" className={`${amMeridian} meridian`}>AM</button>
-          <button type="button" className={`${pmMeridian} meridian`}>PM</button>
+          <button type="button" onClick={() => handleSetToAm(timeToControl, dateSetter)} className={`${amMeridian} meridian`}>AM</button>
+          <button type="button" onClick={() => handleSetToPm(timeToControl, dateSetter)} className={`${pmMeridian} meridian`}>PM</button>
         </div>
       </div>
+
       <Input label="Selected Time" value={computedTime(timeToControl)} readOnly />
     </div>
 
@@ -62,7 +66,7 @@ TimePicker.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
-  timeToControl: PropTypes.string.isRequired,
+  timeToControl: PropTypes.object.isRequired,
   dateSetter: PropTypes.func.isRequired,
 };
 

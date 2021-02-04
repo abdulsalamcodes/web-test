@@ -15,7 +15,7 @@ function Input({
         style={clickable ? { cursor: 'pointer' } : {}}
         className={classnames}
         onChange={onChange}
-        onClick={clickable && onClick}
+        onClick={clickable ? onClick : undefined}
         onKeyPress={onClick}
         {...rest}
       />

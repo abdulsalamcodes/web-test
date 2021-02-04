@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Backdrop from '../Button/Backdrop/Backdrop';
+import Backdrop from '../Backdrop/Backdrop';
 import './Modal.css';
 
 function Modal({ show, closeModal, children }) {
@@ -20,7 +20,7 @@ function Modal({ show, closeModal, children }) {
 }
 
 Modal.propTypes = {
-  children: PropTypes.elementType,
+  children: PropTypes.any,
   show: PropTypes.bool,
   closeModal: PropTypes.func.isRequired,
 };

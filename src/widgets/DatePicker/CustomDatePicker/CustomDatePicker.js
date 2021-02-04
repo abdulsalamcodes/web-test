@@ -37,7 +37,7 @@ CustomDatePicker.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
-  dateToControl: PropTypes.string.isRequired,
+  dateToControl: PropTypes.object.isRequired,
   dateSetter: PropTypes.func.isRequired,
 };
 

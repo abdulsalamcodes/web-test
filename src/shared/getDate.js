@@ -12,8 +12,13 @@ export const getDate = (date) => {
 };
 export const getTime = (date) => {
   const [hour, minute] = date.toLocaleTimeString('en-US').split(/:| /);
-  const hours = date.getHours();
-  const merridian = hours >= 12 ? 'pm' : 'am';
+  let hours = date.getHours();
+  let merridian = hours >= 12 ? 'pm' : 'am';
+  if (hours === 12) {
+    merridian = 'am';
+  }
+  hours %= 12;
+  hours = hours || 12;
   const dateObject = {
     hour, minute, merridian,
   };

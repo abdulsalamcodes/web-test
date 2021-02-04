@@ -1,4 +1,3 @@
-
 .react-datepicker__header {
     background-color: transparent;
     border: none;
@@ -19,6 +18,10 @@
     height: 2rem;
     width: 2rem;
     line-height: 2rem;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    color: hsla(0, 0%, 20%, 0.6);
 }
 
 .react-datepicker__day--selected:active, .react-datepicker__day--selected:focus {
@@ -27,6 +30,7 @@
 
 .react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
     background-color: #33CCFF !important;
+    color: white;
 }
 
 .Calendar, .TimePicker {

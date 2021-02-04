@@ -1,0 +1,14 @@
+.Calendar__Heading {
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;    
+}
+.Calendar__Heading h4 {
+    margin-bottom: .7rem;
+}
+.Icon {
+    color: #828282;
+    height: 26px;
+    width: 26px;
+    cursor: pointer;
+}
