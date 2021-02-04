@@ -1,0 +1,44 @@
+.Board {
+    background-color: white;
+    border-radius: 16px;
+    width: 80%;
+    max-width: 700px;
+    padding: 2rem;
+    margin: 10% auto;
+    height: 50vh;
+}
+
+.Calendar__Heading {
+    margin-bottom: 1rem;
+}
+
+.Calendar__Content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Calendar, .TimePicker {
+    border: 1px solid #E0E0E0;
+    height: 334px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-family);
+}
+
+.TimePicker {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.buttons{
+    text-align: right;
+    width: 100%;
+    margin-top: 1rem;
+}
+

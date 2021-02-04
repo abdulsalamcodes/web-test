@@ -1,0 +1,10 @@
+.Backdrop {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    left: 0;
+    transition: all .3 ease-out;
+    background-color:  hsla(0, 0%, 95%, 0.8);
+}
