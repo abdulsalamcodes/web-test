@@ -6,7 +6,7 @@ import CustomDatePicker from '../CustomDatePicker/CustomDatePicker';
 
 function StartDateModal() {
   const {
-    startDate, setStartDate,
+    startDate, setStartDate, onSubmitModal, onCancelModal,
   } = useContext(TimeContext);
   return (
     <>
@@ -21,8 +21,8 @@ function StartDateModal() {
       </div>
 
       <div className="buttons">
-        <Button label="Cancel" />
-        <Button label="Done" primary />
+        <Button label="Cancel" onClick={onCancelModal} />
+        <Button label="Done" primary onClick={onSubmitModal} />
       </div>
     </>
   );

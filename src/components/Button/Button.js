@@ -6,11 +6,12 @@ import './button.css';
  * Primary UI component for user interaction
  */
 const Button = ({
-  primary, backgroundColor, size, label, ...props
+  onClick, primary, backgroundColor, size, label, ...props
 }) => {
   const mode = primary ? 'button--primary' : 'button--secondary';
   return (
     <button
+      onClick={onClick}
       type="button"
       className={['button', `button--${size}`, mode].join(' ')}
       style={backgroundColor && { backgroundColor }}
