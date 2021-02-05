@@ -26,7 +26,7 @@ function CustomDatePicker({ dateToControl, dateSetter }) {
         selected={dateToControl}
         onChange={(date) => dateSetter(date)}
         calendarContainer={MyContainer}
-        calendarClassName="Calendar"
+        calendarClassName="CustomDatePicker"
         inline
       />
       <Input label="Selected Date" value={computedDate(dateToControl)} readOnly />

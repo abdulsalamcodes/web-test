@@ -31,9 +31,7 @@ function DateAndTimePicker() {
       </div>
       <Modal show={status} closeModal={handleClosingModal}>
         <CalendarHeader action={handleClosingModal} />
-        <div className="Calendar__Content">
-          {content}
-        </div>
+        {content}
         <CalendarFooter />
       </Modal>
     </div>

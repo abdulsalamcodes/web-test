@@ -16,8 +16,8 @@ function TimeContextProvider({ children }) {
   const [showStatus, setShowStatus] = useState(false);
   const [showEndDateModal, setShowEndDateModal] = useState(false);
 
-  const amMeridian = helpers.getTime(startDate).merridian === 'am' ? 'active' : null;
-  const pmMeridian = helpers.getTime(startDate).merridian === 'pm' ? 'active' : null;
+  const amMeridian = (time) => (helpers.getTime(time).merridian === 'am' ? 'active' : null);
+  const pmMeridian = (time) => (helpers.getTime(time).merridian === 'pm' ? 'active' : null);
 
   const computedDate = (date) => `${helpers.getDate(date).month} ${helpers.getDate(date).day}, ${helpers.getDate(date).year}`;
   const computedTime = (time) => `${helpers.getTime(time).hour} : ${helpers.getTime(time).minute} ${helpers.getTime(time).merridian}`;

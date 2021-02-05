@@ -19,12 +19,22 @@ export function subHours(date, hour) {
 }
 
 export function setToAm(date) {
-  const newDate = moment(date).add(12, 'h').toDate();
+  const hours = date.getHours();
+  let newDate = date;
+  if (hours >= 12) {
+    newDate = moment(date).subtract(12, 'h').toDate();
+  } else {
+    newDate = date;
+  }
   return newDate;
 }
 export function setToPm(date) {
-  const newDate = moment(date).subtract(12, 'h').toDate();
+  const hours = date.getHours();
+  let newDate = date;
+  if (hours <= 12) {
+    newDate = moment(date).add(12, 'h').toDate();
+  } else {
+    newDate = date;
+  }
   return newDate;
 }
-
-export const decrementDate = (date, amount) => moment(date).subtract(amount, 'm').toDate();

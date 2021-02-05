@@ -51,8 +51,8 @@ function TimePicker({ timeToControl, dateSetter }) {
         </div>
 
         <div className="meridians">
-          <button type="button" onClick={() => handleSetToAm(timeToControl, dateSetter)} className={`${amMeridian} meridian`}>AM</button>
-          <button type="button" onClick={() => handleSetToPm(timeToControl, dateSetter)} className={`${pmMeridian} meridian`}>PM</button>
+          <button type="button" onClick={() => handleSetToAm(timeToControl, dateSetter)} className={`${amMeridian(timeToControl)} meridian`}>AM</button>
+          <button type="button" onClick={() => handleSetToPm(timeToControl, dateSetter)} className={`${pmMeridian(timeToControl)} meridian`}>PM</button>
         </div>
       </div>
 

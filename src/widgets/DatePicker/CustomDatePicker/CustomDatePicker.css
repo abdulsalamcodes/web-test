@@ -1,17 +1,17 @@
-.react-datepicker__header {
+.CustomDatePicker .react-datepicker__header {
     background-color: transparent;
     border: none;
 }
 
-.react-datepicker__navigation:focus {
+.CustomDatePicker .react-datepicker__navigation:focus {
     outline-width: 0;
 }
 
-.react-datepicker__navigation {
+.CustomDatePicker .react-datepicker__navigation {
     top: 25px;
 }
 
-.react-datepicker__day {
+.CustomDatePicker .react-datepicker__day {
     font-family: var(--font-family);
     border-radius: 50% !important;
     margin: .4rem;
@@ -24,21 +24,12 @@
     color: hsla(0, 0%, 20%, 0.6);
 }
 
-.react-datepicker__day--selected:active, .react-datepicker__day--selected:focus {
+.CustomDatePicker .react-datepicker__day--selected:active, .react-datepicker__day--selected:focus {
     outline-width: 0;
 }
 
-.react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
+.CustomDatePicker .react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
     background-color: #33CCFF !important;
     color: white;
 }
 
-.Calendar, .TimePicker {
-    border: 1px solid #E0E0E0;
-    height: 334px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    font-family: var(--font-family);
-}

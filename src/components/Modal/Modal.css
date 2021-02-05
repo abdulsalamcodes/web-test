@@ -1,12 +1,21 @@
 .Modal {
     position: fixed;
     z-index: 500;
-    width: 70%;
+    width: 90%;
     max-width: 700px;
     background: #FFFFFF;
     border-radius: 16px;
     padding: 32px;
     margin-top: 0;
-    top: 10%;
+    top: 7%;
     transition: all 0.3s ease-out;
+    max-height: 700px;
+    overflow: auto;
+}
+
+
+@media (max-width: 800px) {
+    .Modal  {
+        left: 5%;
+    }
 }
