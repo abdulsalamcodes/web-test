@@ -1,0 +1,75 @@
+@import '../../../variables';
+
+.CustomDatePicker {
+    .react-datepicker {
+        &__header {
+            background-color: transparent;
+            border: none;
+            padding-top: 1.5rem;
+        }
+
+        &__current-month {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 160%;
+            /* identical to box height, or 26px */
+            text-align: center;
+            /* PC - Black */
+            color: $black-color;
+        }
+
+
+        &__navigation {
+            top: 30px;
+            outline-width: 0;
+        }
+
+        &__navigation--previous {
+            left: 60px;
+        }
+
+        &__navigation--next {
+            right: 60px;
+        }
+
+
+        &__day {
+            font-family: $font-family;
+            border-radius: 50% !important;
+            margin: .4rem;
+            height: 2rem;
+            width: 2rem;
+            line-height: 2rem;
+            font-weight: 600;
+            font-size: 12px;
+            text-align: center;
+            color: hsla(0, 0%, 20%, 0.6);
+
+            &-names {
+                font-size: 16px;
+                margin-top: 1rem;
+                line-height: 160%;
+                padding: 0 .5rem;
+                text-align: center;
+                color: #333333;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            &--outside-month {
+                color: hsla(0, 0%, 20%, 0.2);
+            }
+
+            &--selected,
+            &--keyboard-selected {
+                background-color: $young-blue !important;
+                color: $white-color;
+                outline-width: 0;
+            }
+
+        }
+    }
+
+}

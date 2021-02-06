@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Backdrop from '../Backdrop/Backdrop';
-import './Modal.css';
+import './Modal.scss';
 
 function Modal({ show, closeModal, children }) {
   const style = {
@@ -20,8 +20,17 @@ function Modal({ show, closeModal, children }) {
 }
 
 Modal.propTypes = {
+  /**
+   * Content of the modal
+   */
   children: PropTypes.any,
+  /**
+   * Toggle show or hide the modal
+   */
   show: PropTypes.bool,
+  /**
+   * Close the modal
+   */
   closeModal: PropTypes.func.isRequired,
 };
 

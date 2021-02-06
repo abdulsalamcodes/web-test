@@ -1,3 +1,5 @@
+import * as constants from '../constants';
+
 export const getDate = (date) => {
   const [month, day, year] = date.toLocaleDateString('en-US').split('/');
   const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -13,7 +15,7 @@ export const getDate = (date) => {
 export const getTime = (date) => {
   const [hour, minute] = date.toLocaleTimeString('en-US').split(/:| /);
   const hours = date.getHours();
-  const merridian = hours >= 12 ? 'pm' : 'am';
+  const merridian = hours >= 12 ? constants.PM : constants.AM;
   const dateObject = {
     hour, minute, merridian,
   };

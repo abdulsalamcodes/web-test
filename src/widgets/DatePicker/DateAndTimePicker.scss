@@ -1,5 +1,7 @@
+@import '../../variables';
+
 .Board {
-    background-color: white;
+    background-color: $white-color;
     border-radius: 16px;
     width: 80%;
     max-width: 700px;

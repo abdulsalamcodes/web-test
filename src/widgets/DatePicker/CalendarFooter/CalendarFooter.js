@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './CalendarFooter.css';
+import './CalendarFooter.scss';
 import Button from '../../../components/Button/Button';
 import { TimeContext } from '../../../contexts/TimeContext';
 

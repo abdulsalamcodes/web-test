@@ -1,34 +1,33 @@
+@import '../../_variables';
+
 .Input {
     background-color: white;
-    border: 1px solid #B9B9B9;
+    border: 1px solid $grey-1;
     border-radius: 8px;
     padding-right: 1rem;
     padding-left: 1rem;
-    font-family: var(--font-family);
+    font-family: $font-family;
     width: 100%;
+    max-width: 300px;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
     display: flex;
     align-items: center;
-    /* Gray 2 */
-    color: #4F4F4F;
+    color: $gray-2;
+        outline-width: 0;
+
+
 }
 
 .Label {
     display: block;
     margin-bottom: .7rem;
-    color: #828282;
-    font-family: var(--font-family);
+    color: $gray-3;
+    font-family: $font-family;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-}
-
-.Input:focus {
-    outline-width: 0;
-    border-color: #9d9b9b;
 }
 
 .small {

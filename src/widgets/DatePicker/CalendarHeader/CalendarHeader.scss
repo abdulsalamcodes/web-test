@@ -1,3 +1,5 @@
+@import '../../../_variables.scss';
+
 .Calendar__Heading {
     margin-bottom: 28px;
     display: flex;
@@ -7,7 +9,7 @@
     margin-bottom: .7rem;
 }
 .Icon {
-    color: #828282;
+    color: $gray-3;
     height: 26px;
     width: 26px;
     cursor: pointer;

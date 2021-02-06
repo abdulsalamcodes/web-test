@@ -1,7 +1,7 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 import { FiX } from 'react-icons/fi';
-import './CalendarHeader.css';
+import './CalendarHeader.scss';
 
 function CalendarHeader({ action }) {
   return (

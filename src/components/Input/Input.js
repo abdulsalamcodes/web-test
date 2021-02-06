@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Input.css';
+import './Input.scss';
 
 function Input({
   clickable, size, label, onClick, onChange, ...rest
@@ -30,7 +30,7 @@ Input.propTypes = {
    */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   /**
-   * Optional onChange handler
+   * What is the input field for?
    */
   label: PropTypes.string,
   /**
@@ -42,7 +42,7 @@ Input.propTypes = {
    */
   clickable: PropTypes.bool,
   /**
-   * Is it clickable?
+   * What action should be performed when clicked?
    */
   onClick: PropTypes.func,
 };

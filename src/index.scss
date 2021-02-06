@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
-:root {
-  --black-color: #18243A;
-  --text-color: #BDBDBD;
-  --primary-color: #003399;
-  --font-family: 'Montserrat', sans-serif;
-}
+@import './variables';
 
 * {
   box-sizing: border-box;
@@ -13,7 +8,7 @@
 }
 
 h1, h2, h4, h5, h6 {
-  color: var(--black-color);
+  color: $black-color;
   margin: 0;
   margin-bottom: .5rem;
 }
@@ -24,9 +19,9 @@ p {
 
 body {
   margin: 0;
-  color: var(--text-color);
+  color: $grey-1;
   background-color: #f8f8f8;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-family;
 }
 
 .d-flex {

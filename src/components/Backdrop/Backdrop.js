@@ -1,5 +1,5 @@
 import React from 'react';
-import './Backdrop.css';
+import './Backdrop.scss';
 import PropTypes from 'prop-types';
 
 function Backdrop({ show, onClickHandler }) {

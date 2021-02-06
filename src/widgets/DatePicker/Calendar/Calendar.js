@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CustomDatePicker from '../CustomDatePicker/CustomDatePicker';
 import TimePicker from '../TimePicker/TimePicker';
-import './Calendar.css';
+import './Calendar.scss';
 
 function Calendar({ dateToControl, action }) {
   return (
@@ -16,9 +16,6 @@ function Calendar({ dateToControl, action }) {
 export default Calendar;
 
 Calendar.propTypes = {
-  /**
-     * Is this the principal call to action on the page?
-     */
   dateToControl: PropTypes.object.isRequired,
   action: PropTypes.func.isRequired,
 };

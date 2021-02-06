@@ -1,13 +1,28 @@
 import React from 'react';
-import './Navbar.css';
+import PropTypes from 'prop-types';
+import './Navbar.scss';
 import image from '../../assets/EntreLogo.svg';
 
-function Navbar() {
+export const Logo = () => <img src={image} alt="Logo" />;
+function Navbar({ logo = Logo, links }) {
   return (
     <div className="Navbar">
-      <img src={image} alt="Logo" />
+      {logo}
+      <div>
+        {links}
+      </div>
     </div>
   );
 }
+
+Navbar.propTypes = {
+  logo: PropTypes.any,
+  links: PropTypes.any,
+};
+
+Navbar.defaultProps = {
+  logo: <Logo />,
+  links: 'Home',
+};
 
 export default Navbar;

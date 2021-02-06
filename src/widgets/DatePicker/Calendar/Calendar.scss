@@ -1,20 +1,20 @@
+@import '../../../variables';
+
 .Calendar__Content {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
+@media (max-width: 800px) {
+        grid-template-columns: 1fr;
+}
 }
 
-@media (max-width: 800px) {
-    .Calendar__Content {
-        grid-template-columns: 1fr;
-    }
-}
 
 .CustomDatePicker, .TimePicker {
-    border: 1px solid #E0E0E0;
-    height: 334px;
+    border: 1px solid $gray-5;
+    /* min-height: 334px; */
     box-sizing: border-box;
     border-radius: 12px;
     margin-bottom: 1rem;
-    font-family: var(--font-family);
+    font-family: $font-family;
 }

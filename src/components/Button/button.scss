@@ -1,3 +1,5 @@
+@import '../../_variables';
+
 .button {
   font-weight: 700;
   border: 0;
@@ -10,37 +12,38 @@
   min-width: 151px;
   height: 50px;
 
-}
-.button--primary {
+&--primary {
   color: white;
-  background-color: #003399;
+  background-color: $dark-blue;
+  &:hover {
+    background-color: #03266b;
+  }
 }
 
-.button--primary:hover {
-  background-color: #03266b;
-}
-.button--secondary {
+&--secondary {
   color:  #B9B9B9;
   background-color: white;
   border: 1px solid white;
+
+  &:hover {
+    border: 1px solid #eeeeee;
+  }
 }
 
-.button--secondary:hover {
-  border: 1px solid #eeeeee;
-}
-.button--small {
+&--small {
   font-size: 12px;
   padding: 10px 16px;
   height: 40px;
 }
-.button--medium {
+&--medium {
   font-size: 14px;
   padding: 11px 20px;
   height: 50px;
 }
 
-.button--large {
+&--large {
   font-size: 16px;
   padding: 12px 24px;
   height: 50px;
+}
 }

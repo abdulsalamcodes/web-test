@@ -1,14 +1,15 @@
 import React, { useContext } from 'react';
 import DatePicker from 'react-datepicker';
 import PropTypes from 'prop-types';
-import './TimePicker.css';
+import './TimePicker.scss';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import Input from '../../../components/Input/Input';
 import { TimeContext } from '../../../contexts/TimeContext';
+import { AM, PM } from '../../../constants';
 
 function TimePicker({ timeToControl, dateSetter }) {
   const {
-    amMeridian, pmMeridian,
+    meridianActiveClass,
     computedTime,
     handleIncrementDate,
     handleIncrementHour, handleDecrementHour, handleDecrementDate,
@@ -51,8 +52,8 @@ function TimePicker({ timeToControl, dateSetter }) {
         </div>
 
         <div className="meridians">
-          <button type="button" onClick={() => handleSetToAm(timeToControl, dateSetter)} className={`${amMeridian(timeToControl)} meridian`}>AM</button>
-          <button type="button" onClick={() => handleSetToPm(timeToControl, dateSetter)} className={`${pmMeridian(timeToControl)} meridian`}>PM</button>
+          <button type="button" onClick={() => handleSetToAm(timeToControl, dateSetter)} className={`${meridianActiveClass(timeToControl, AM)} meridian`}>AM</button>
+          <button type="button" onClick={() => handleSetToPm(timeToControl, dateSetter)} className={`${meridianActiveClass(timeToControl, PM)} meridian`}>PM</button>
         </div>
       </div>
 

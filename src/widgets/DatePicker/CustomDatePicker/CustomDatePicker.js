@@ -4,7 +4,7 @@ import DatePicker, { CalendarContainer } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Input from '../../../components/Input/Input';
 import { TimeContext } from '../../../contexts/TimeContext';
-import './CustomDatePicker.css';
+import './CustomDatePicker.scss';
 
 // eslint-disable-next-line react/prop-types
 const MyContainer = ({ className, children }) => (
